@@ -1,0 +1,21 @@
+mutation UpdateUser(
+    $bio: String,
+    $firstName: String,
+    $lastName: String,
+    $phone: String,
+    $username: String
+) {
+    user: updateUser(bio: $bio, firstName: $firstName, lastName: $lastName, phone: $phone, username: $username) {
+        id
+        username
+        email
+        firstName
+        lastName
+        phone
+        image {
+            url
+        }
+        description
+        locale
+    }
+}

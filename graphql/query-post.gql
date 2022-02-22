@@ -1,0 +1,19 @@
+query Post($id: ID!) {
+    post(id: $id) {
+        id
+        title
+        created
+        content
+        companies {
+            id
+        }
+        coverImage {
+            url
+        }
+        images {
+            id
+            url
+        }
+        timeToReading
+    }
+}
